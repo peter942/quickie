@@ -17,4 +17,4 @@
 .DS_Store
 
 # Ignore images and pins stuff
-/public/system/*
+/public/*
