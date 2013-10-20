@@ -1,4 +1,7 @@
 Quickie::Application.routes.draw do
+  resources :blogs
+
+  devise_for :users
 root "pages#home"
 
 get "about" => "pages#about"
