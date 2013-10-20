@@ -1,29 +1,47 @@
 <h1>Listing blogs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Text</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
     <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.text %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+
+<div class="box panel panel-primary">
+
+    <div class="panel-heading">
+   
+
+    <h3 class="panel-title"><%= link_to blog.title, blog %></h3>
+
+
+
+    </div>
+
+    <div class="panel-body">
+
+        <%= blog.text %>
+
+        <br>
+        <br>
+
+        <div class="blog-links">
+
+     </div>
+
+      <div class="panel-footer">
+
+        <%= link_to 'Edit', edit_blog_path(blog) %>
+        <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+        </div>
+    </div>
+
+
+      
+      <% end %>
+
+
+</div>
 
 <br>
 
 <%= link_to 'New Blog', new_blog_path %>
+
